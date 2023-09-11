@@ -13,6 +13,9 @@ export class ProductListComponent {
   share() {
     window.alert('The product has been shared!');
   }
+  onNotify(){
+    window.alert('This is the notify which the price over 700 dollars ')
+  }
 }
 
 
