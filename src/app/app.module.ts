@@ -10,14 +10,18 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { CartComponent } from './cart/cart.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { ShipComponent } from './ship/ship.component';
 @NgModule({
   imports: [
     BrowserModule,
+    HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'product/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
+      { path: 'ship', component: ShipComponent },
     ]),
   ],
   declarations: [
@@ -27,6 +31,7 @@ import { CartComponent } from './cart/cart.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
+    ShipComponent,
   ],
   bootstrap: [AppComponent],
 })
